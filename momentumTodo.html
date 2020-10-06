@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momentum</title>
-    <link rel="stylesheet" href="/momentumTodo.css">
-	<script sync="" src="/jquery-1.12.4.js"></script>
-	<script async="" src="/js_geolocation.js"></script>
-	<script async="" src="/js_ready.js"></script>
+    <link rel="stylesheet" href="momentumTodo.css">
+    <script type="text/javascript" defer src="//dapi.kakao.com/v2/maps/sdk.js?appkey=114e93eefd78ce0773c490ab59ea4b9f."></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Quicksand&display=swap" rel="stylesheet">
+    <script defer src="js-momentumTodo.js"></script>
 </head>
 <body>
     <header>
-        <div class="googleSearch headerItem">searchIcon</div>
+        <div class="googleSearch headerItem">
+            <img src="images/search.png" class="searchIcon"></img>
+        </div>
         <div class="weather headerItem">weatherApi</div>
     </header>
     <main>
-        <h1 id ="clock">00:00</h1>
-        <h2 id = "username">what's your name?</h2>
-        <h2 id = "welcome">good afternoon username</h2>
-        <input id ="todo" value="what is your main focus today?"></input>
+        <h1 id ="clock" style="width: 365px; height: 140px;">00:00</h1>
+        <h2 id = "yourName">what's your name?
+            <input id ="userName" onkeyup="enterkey();"></input>
+        </h2>
+        <h2 id ="welcome" class="hidden"></h2>
     </main>
     <footer>
         <div class = "geoLocation item">seoul, korea</div>
-        <div class = "wiseQuotes item">He who has a why to live can bear almost any how</div>
+        <div id = "wiseQuotes" class ="item"></div>
         <div class = "todo item">todocontrol</div>
     </footer>
-    <script src=""></script>
 </body>
 </html>
